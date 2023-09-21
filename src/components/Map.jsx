@@ -1,8 +1,10 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import style from "./Map.module.css";
+import { useCities } from "../context/CitiesContext";
 const Map = () => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const { cities } = useCities();
+  const [searchParams] = useSearchParams();
   const lat = searchParams.get("lat");
   const lng = searchParams.get("lng");
   return (
