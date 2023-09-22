@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar";
 const Homepage = () => {
   return (
     <main className={styles.homepage}>
+      <Navbar />
       <section>
-        <Navbar />
         <h1>
           You travel the world.
           <br />
